@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 const minassIcon = document.getElementById('minassIcon');
-const minassSection = document.getElementById('minassSection');
-    
+const minassSection = document.getElementById('minassSection');    
 const minasIcon = document.getElementById('minasIcon');
 const minasSection = document.getElementById('minasSection');
 const minaIcon = document.getElementById('minaIcon');
@@ -256,7 +255,7 @@ const minaSection = document.getElementById('minaSection');
 
     // Função para definir o ícone ativo
     function setActiveIcon(activeIcon) {
-        [minasIcon, minaIcon, resultadoIcon, palpiteIcon, jogarIcon].forEach(icon => {
+        [minassIcon, minasIcon, minaIcon, resultadoIcon, palpiteIcon, jogarIcon].forEach(icon => {
             icon.classList.remove('active');
         });
         activeIcon.classList.add('active');
