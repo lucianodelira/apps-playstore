@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const expandMenu = document.getElementById('expandMenu');
     const contatoLink = document.getElementById('contatoLink');
     const instalarAppLink = document.getElementById('instalarAppLink');
+
+    
+    
+const minassIcon = document.getElementById('minassIcon');
+const minassSection = document.getElementById('minassSection');
+    
 const minasIcon = document.getElementById('minasIcon');
 const minasSection = document.getElementById('minasSection');
 const minaIcon = document.getElementById('minaIcon');
@@ -316,13 +322,22 @@ function hideAllSections() {
     politicasPrivacidadeSection.classList.add('hidden');
     termosServicoSection.classList.add('hidden');
     sobreSection.classList.add('hidden');
+    minassSection.classList.add('hidden');
     minasSection.classList.add('hidden');
     minaSection.classList.add('hidden'); // Nova seção Mina
 }
 
 
+minassIcon.addEventListener('click', function (event) {
+    event.preventDefault();
+    setActiveIcon(minassIcon);
+    showSection(minassSection);
+});
 
-minasIcon.addEventListener('click', function (event) {
+    
+    
+    
+    minasIcon.addEventListener('click', function (event) {
     event.preventDefault();
     setActiveIcon(minasIcon);
     showSection(minasSection);
@@ -807,7 +822,7 @@ window.addEventListener('scroll', fecharMenuAoRolar);
     });
 
 function setActiveIcon(activeIcon) {
-    [minasIcon, minaIcon, resultadoIcon, palpiteIcon, jogarIcon, compartilharIcon].forEach(icon => {
+    [minassIcon, minasIcon, minaIcon, resultadoIcon, palpiteIcon, jogarIcon, compartilharIcon].forEach(icon => {
         icon.classList.remove('active');
     });
     activeIcon.classList.add('active');
